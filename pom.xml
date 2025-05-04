@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.wargulwb</groupId>
 	<artifactId>pixelcross</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
+	<version>0.1.0</version>
 	<name>PixelCross</name>
 	<description>Simple application to convert pixel art images to cross stitch
 		patterns.</description>
