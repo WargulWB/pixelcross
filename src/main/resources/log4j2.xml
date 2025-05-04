@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration
+  name="Java11ExampleProjectLoggingConfiguration"
+  status="fatal">
+  <Appenders>
+    <!--
+    <RollingFile
+      name="file"
+      fileName="log/exampleproject.log"
+      filePattern="log/exampleproject.log.%i.gz">
+      <PatternLayout>
+        <pattern>%d{dd.MM HH:mm:ss.SSS} %-5p [%t] %c{1}.%M: %m%n</pattern>
+      </PatternLayout>
+      <Policies>
+        <SizeBasedTriggeringPolicy size="50 MB" />
+      </Policies>
+      <DefaultRolloverStrategy max="10" />
+    </RollingFile>
+    --> 
+    <Console
+      name="console"
+      target="SYSTEM_OUT">
+      <PatternLayout pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+    </Console>
+  </Appenders>
+
+  <Loggers>
+    <Root level="debug">
+      <AppenderRef ref="console" />
+    </Root>
+  </Loggers>
+</Configuration>

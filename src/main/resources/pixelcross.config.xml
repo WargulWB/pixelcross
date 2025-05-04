@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<config>
+  <output grayscale="false"/>
+  <yarndata>
+    <!-- those colors are originally taken from 'https://lordlibidan.com/dmc-thread-inventory-spreadsheet/' -->
+    <!-- I simply wrote a script which determined the RGB color value displayed in the spreadsheet and converted it to this format -->
+    <!-- This means I can not guarantee that those colors are a good match to the actual yarn color. -->
+    <!-- You can adjust this for yourself. If anyone has RGB colors for more sortiments, you can contact me via github, than I can add the sortiment so anyone can use it. -->
+    <sortiment producer="DMC">
+      <yarn id="1" name="White Tin" rgb="#efeef0" />
+      <yarn id="2" name="Tin" rgb="#c5c4c9" />
+      <yarn id="3" name="Tin - Medium" rgb="#b0b0b5" />
+      <yarn id="4" name="Tin - Dark" rgb="#9c9b9d" />
+      <yarn id="5" name="Driftwood - Light" rgb="#e3ccbe" />
+      <yarn id="6" name="Driftwood - Medium Light" rgb="#dcc6b8" />
+      <yarn id="7" name="Driftwood" rgb="#ccb8aa" />
+      <yarn id="8" name="Driftwood - Dark" rgb="#9d7d71" />
+      <yarn id="9" name="Cocoa - Very Dark" rgb="#552014" />
+      <yarn id="10" name="Tender Green - Very Light" rgb="#edfed9" />
+      <yarn id="11" name="Tender Green - Light" rgb="#e2edb5" />
+      <yarn id="12" name="Tender Green" rgb="#cdd99a" />
+      <yarn id="13" name="Nile Green - Medium Light" rgb="#bff6e0" />
+      <yarn id="14" name="Apple Green - Pale" rgb="#d0fbb2" />
+      <yarn id="15" name="Apple Green" rgb="#d1eda4" />
+      <yarn id="16" name="Chartreuse - Light" rgb="#a4d67c" />
+      <yarn id="17" name="Yellow Plum - Light" rgb="#e5e272" />
+      <yarn id="18" name="Yellow Plum" rgb="#d9d56d" />
+      <yarn id="19" name="Autumn Gold - Medium Light" rgb="#f7c95f" />
+      <yarn id="20" name="Shrimp" rgb="#f7af93" />
+      <yarn id="21" name="Alizarian - Light" rgb="#d79982" />
+      <yarn id="22" name="Alizarian" rgb="#bc604e" />
+      <yarn id="23" name="Apple Blossom" rgb="#ede2ed" />
+      <yarn id="24" name="White Lavender" rgb="#e0d7ee" />
+      <yarn id="25" name="Lavender - Ultra Light" rgb="#dad2e9" />
+      <yarn id="26" name="Lavender - Pale" rgb="#cfc8de" />
+      <yarn id="27" name="White Violet" rgb="#e9ecfc" />
+      <yarn id="28" name="Eggplant - Medium Light" rgb="#7d4e92" />
+      <yarn id="29" name="Eggplant" rgb="#674076" />
+      <yarn id="30" name="Blueberry - Medium Light" rgb="#6d54d3" />
+      <yarn id="31" name="Blueberry" rgb="#5834a3" />
+      <yarn id="32" name="Blueberry - Dark" rgb="#4d2e8a" />
+      <yarn id="33" name="Fuchsia" rgb="#d9539f" />
+      <yarn id="34" name="Fuchsia - Dark" rgb="#ae4280" />
+      <yarn id="35" name="Fuchsia - Very Dark" rgb="#732b55" />
+      <yarn id="150" name="Red - Bright" rgb="#cf0053" />
+      <yarn id="151" name="Pink" rgb="#ffcbd7" />
+      <yarn id="152" name="Tawny - Dark" rgb="#e1a1a1" />
+      <yarn id="153" name="Lilac" rgb="#eac5eb" />
+      <yarn id="154" name="Red - Very Dark" rgb="#4b233a" />
+      <yarn id="155" name="Forget-me-not Blue" rgb="#9774b6" />
+      <yarn id="156" name="Blue - Medium" rgb="#8577b4" />
+      <yarn id="157" name="Blue - Light" rgb="#b5b8ea" />
+      <yarn id="158" name="Blue - Dark" rgb="#393068" />
+      <yarn id="159" name="Petrol Blue - Light" rgb="#bcb5de" />
+      <yarn id="160" name="Petrol Blue - Medium" rgb="#8178a9" />
+      <yarn id="161" name="Petrol Blue - Dark" rgb="#60568b" />
+      <yarn id="162" name="Baby Blue - Light" rgb="#cae7f0" />
+      <yarn id="163" name="Green" rgb="#557a60" />
+      <yarn id="164" name="Green - Light" rgb="#bae4b6" />
+      <yarn id="165" name="Green - Bright" rgb="#e1f477" />
+      <yarn id="166" name="Lime Green" rgb="#adc238" />
+      <yarn id="167" name="Khaki Brown" rgb="#855d31" />
+      <yarn id="168" name="Silver Gray" rgb="#b1aeb7" />
+      <yarn id="169" name="Pewter Gray" rgb="#827d7d" />
+      <yarn id="208" name="Lavender - Very Dark" rgb="#9442a7" />
+      <yarn id="209" name="Lavender - Dark" rgb="#ba72c6" />
+      <yarn id="210" name="Lavender - Medium" rgb="#d49fe1" />
+      <yarn id="211" name="Lavender - Light" rgb="#e5bded" />
+      <yarn id="221" name="Shell Pink - Very Dark" rgb="#792631" />
+      <yarn id="223" name="Shell Pink - Light" rgb="#bb6864" />
+      <yarn id="224" name="Shell Pink - Very Light" rgb="#e2a598" />
+      <yarn id="225" name="Shell Pink - Ultra Very Light" rgb="#f8d9cd" />
+      <yarn id="300" name="Mahogany - Very Dark" rgb="#6c3116" />
+      <yarn id="301" name="Mahogany - Medium" rgb="#aa5237" />
+      <yarn id="304" name="Red - Medium" rgb="#a10c39" />
+      <yarn id="307" name="Lemon" rgb="#fde949" />
+      <yarn id="309" name="Rose - Dark" rgb="#ba2044" />
+      <yarn id="310" name="Black" rgb="#000000" />
+      <yarn id="311" name="Blue - Medium" rgb="#002a64" />
+      <yarn id="312" name="Baby Blue - Very Dark" rgb="#1f3279" />
+      <yarn id="315" name="Antique Mauve - Medium Dark" rgb="#7d4246" />
+      <yarn id="316" name="Antique Mauve - Medium" rgb="#bc757f" />
+      <yarn id="317" name="Pewter Gray" rgb="#6d6469" />
+      <yarn id="318" name="Steel Gray - Light" rgb="#999b9d" />
+      <yarn id="319" name="Pistachio Green - Very Dark" rgb="#3a553b" />
+      <yarn id="320" name="Pistachio Green - Medium" rgb="#608c59" />
+      <yarn id="321" name="Red" rgb="#bd1136" />
+      <yarn id="322" name="Baby Blue" rgb="#3a609d" />
+      <yarn id="326" name="Rose - Very Dark" rgb="#ac1c37" />
+      <yarn id="327" name="Violet" rgb="#5e0f77" />
+      <yarn id="333" name="Blue Violet - Very Dark" rgb="#6e2e9b" />
+      <yarn id="334" name="Baby Blue - Medium" rgb="#6085b8" />
+      <yarn id="335" name="Rose" rgb="#d63d57" />
+      <yarn id="336" name="Blue" rgb="#0c275e" />
+      <yarn id="340" name="Blue Violet - Medium" rgb="#996dc3" />
+      <yarn id="341" name="Blue Violet - Light" rgb="#a39ad7" />
+      <yarn id="347" name="Salmon - Very Dark" rgb="#ab1b33" />
+      <yarn id="349" name="Coral - Dark" rgb="#c62c38" />
+      <yarn id="350" name="Coral - Medium" rgb="#de3f40" />
+      <yarn id="351" name="Coral" rgb="#ed625b" />
+      <yarn id="352" name="Coral - Light" rgb="#f78372" />
+      <yarn id="353" name="Peach" rgb="#fdb4a1" />
+      <yarn id="355" name="Terra Cotta - Dark" rgb="#97382b" />
+      <yarn id="356" name="Terra Cotta - Medium" rgb="#be5c4b" />
+      <yarn id="367" name="Pistachio Green - Dark" rgb="#446b45" />
+      <yarn id="368" name="Pistachio Green - Light" rgb="#7fc66d" />
+      <yarn id="369" name="Pistachio Green - Very Light" rgb="#cdefa6" />
+      <yarn id="370" name="Mustard - Medium" rgb="#917245" />
+      <yarn id="371" name="Mustard" rgb="#9f8352" />
+      <yarn id="372" name="Mustard - Light" rgb="#ad9564" />
+      <yarn id="400" name="Mahogany - Dark" rgb="#813718" />
+      <yarn id="402" name="Mahogany - Very Light" rgb="#ef9e74" />
+      <yarn id="407" name="Desert Sand - Dark" rgb="#b77159" />
+      <yarn id="413" name="Pewter Gray - Dark" rgb="#4a4749" />
+      <yarn id="414" name="Steel Gray - Dark" rgb="#766e72" />
+      <yarn id="415" name="Pearl Gray" rgb="#b8b9bd" />
+      <yarn id="420" name="Hazelnut Brown - Dark" rgb="#855a30" />
+      <yarn id="422" name="Hazelnut Brown - Light" rgb="#c99a67" />
+      <yarn id="433" name="Brown - Medium" rgb="#73421e" />
+      <yarn id="434" name="Brown - Light" rgb="#8f5332" />
+      <yarn id="435" name="Brown - Very Light" rgb="#a96538" />
+      <yarn id="436" name="Tan" rgb="#c78559" />
+      <yarn id="437" name="Tan - Light" rgb="#daa26f" />
+      <yarn id="444" name="Lemon - Dark" rgb="#f5bc13" />
+      <yarn id="445" name="Lemon - Light" rgb="#fcf999" />
+      <yarn id="451" name="Shell Gray - Dark" rgb="#887773" />
+      <yarn id="452" name="Shell Gray - Medium" rgb="#ad9994" />
+      <yarn id="453" name="Shell Gray - Light" rgb="#ccb8aa" />
+      <yarn id="469" name="Avocado Green" rgb="#5b6533" />
+      <yarn id="470" name="Avocado Green - Light" rgb="#72813e" />
+      <yarn id="471" name="Avocado Green - Very Light" rgb="#9eb357" />
+      <yarn id="472" name="Avocado Green - Ultra Light" rgb="#d1de75" />
+      <yarn id="498" name="Red - Dark" rgb="#970b2c" />
+      <yarn id="500" name="Blue Green - Very Dark" rgb="#1d362a" />
+      <yarn id="501" name="Blue Green - Dark" rgb="#2f5446" />
+      <yarn id="502" name="Blue Green" rgb="#57826e" />
+      <yarn id="503" name="Blue Green - Medium" rgb="#89b89f" />
+      <yarn id="504" name="Blue Green - Very Light" rgb="#acdac1" />
+      <yarn id="505" name="Grass Green - Dark" rgb="#338362" />
+      <yarn id="517" name="Wedgewood - Dark" rgb="#216285" />
+      <yarn id="518" name="Wedgewood - Light" rgb="#50819c" />
+      <yarn id="519" name="Sky Blue" rgb="#94b7cb" />
+      <yarn id="520" name="Fern Green - Dark" rgb="#384526" />
+      <yarn id="522" name="Fern Green" rgb="#808b6e" />
+      <yarn id="523" name="Fern Green - Light" rgb="#959f7a" />
+      <yarn id="524" name="Fern Green - Very Light" rgb="#aea78e" />
+      <yarn id="535" name="Ash Gray - Very Light" rgb="#4b4b49" />
+      <yarn id="543" name="Beige Brown - Ultra Very Light" rgb="#ead0b5" />
+      <yarn id="550" name="Violet - Very Dark" rgb="#580e5c" />
+      <yarn id="552" name="Violet - Medium" rgb="#902f99" />
+      <yarn id="553" name="Violet" rgb="#a449ac" />
+      <yarn id="554" name="Violet - Light" rgb="#dc9cde" />
+      <yarn id="561" name="Jade - Very Dark" rgb="#285e48" />
+      <yarn id="562" name="Jade - Medium" rgb="#3b8c5a" />
+      <yarn id="563" name="Jade - Light" rgb="#6ed39a" />
+      <yarn id="564" name="Jade - Very Light" rgb="#95e4af" />
+      <yarn id="580" name="Moss Green - Dark" rgb="#355f0b" />
+      <yarn id="581" name="Moss Green" rgb="#838a29" />
+      <yarn id="597" name="Turquoise" rgb="#52adab" />
+      <yarn id="598" name="Turquoise - Light" rgb="#97d8d3" />
+      <yarn id="600" name="Cranberry - Very Dark" rgb="#bf1c48" />
+      <yarn id="601" name="Cranberry - Dark" rgb="#c62a53" />
+      <yarn id="602" name="Cranberry - Medium" rgb="#d63f68" />
+      <yarn id="603" name="Cranberry - Light Medium" rgb="#fb4b7c" />
+      <yarn id="604" name="Cranberry - Light" rgb="#f793b2" />
+      <yarn id="605" name="Cranberry - Very Light" rgb="#fbacc4" />
+      <yarn id="606" name="Orange-red - Bright" rgb="#f70f00" />
+      <yarn id="608" name="Orange - Bright" rgb="#fd480c" />
+      <yarn id="610" name="Drab Brown - Dark" rgb="#6b5039" />
+      <yarn id="611" name="Drab Brown" rgb="#7c5f46" />
+      <yarn id="612" name="Drab Brown - Light" rgb="#a6885e" />
+      <yarn id="613" name="Drab Brown - Very Light" rgb="#b99f72" />
+      <yarn id="632" name="Desert Sand - Ultra Very Dark" rgb="#7f4232" />
+      <yarn id="640" name="Beige Gray - Very Dark" rgb="#817868" />
+      <yarn id="642" name="Beige Gray - Dark" rgb="#958d79" />
+      <yarn id="644" name="Beige Gray - Medium" rgb="#c4bea6" />
+      <yarn id="645" name="Beaver Gray - Very Dark" rgb="#5d5d54" />
+      <yarn id="646" name="Beaver Gray - Dark" rgb="#6b6860" />
+      <yarn id="647" name="Beaver Gray - Medium" rgb="#908e85" />
+      <yarn id="648" name="Beaver Gray - Light" rgb="#a7a69f" />
+      <yarn id="666" name="Red - Bright" rgb="#ce1b33" />
+      <yarn id="676" name="Old Gold - Light" rgb="#ecbf7d" />
+      <yarn id="677" name="Old Gold - Very Light" rgb="#f2dc9f" />
+      <yarn id="680" name="Old Gold - Dark" rgb="#b07b46" />
+      <yarn id="699" name="Green" rgb="#075b26" />
+      <yarn id="700" name="Green - Bright" rgb="#076c34" />
+      <yarn id="701" name="Green - Light" rgb="#217c36" />
+      <yarn id="702" name="Kelly Green" rgb="#379130" />
+      <yarn id="703" name="Chartreuse" rgb="#63b330" />
+      <yarn id="704" name="Chartreuse - Bright" rgb="#88c53a" />
+      <yarn id="712" name="Cream" rgb="#f6efda" />
+      <yarn id="718" name="Plum" rgb="#cb2089" />
+      <yarn id="720" name="Orange Spice - Dark" rgb="#c83a24" />
+      <yarn id="721" name="Orange Spice - Medium" rgb="#f46440" />
+      <yarn id="722" name="Orange Spice - Light" rgb="#f98756" />
+      <yarn id="724" name="Winnie The Pooh Gold" rgb="#f9d039" />
+      <yarn id="725" name="Topaz" rgb="#f9c15b" />
+      <yarn id="726" name="Topaz - Light" rgb="#fddb63" />
+      <yarn id="727" name="Topaz - Very Light" rgb="#fde98b" />
+      <yarn id="728" name="Golden Yellow" rgb="#f2ae3f" />
+      <yarn id="729" name="Old Gold - Medium" rgb="#ce9657" />
+      <yarn id="730" name="Olive Green - Very Dark" rgb="#63520b" />
+      <yarn id="731" name="Olive Green - Dark" rgb="#6b580b" />
+      <yarn id="732" name="Olive Green" rgb="#725c0c" />
+      <yarn id="733" name="Olive Green - Medium" rgb="#a78a44" />
+      <yarn id="734" name="Olive Green - Light" rgb="#bb9c54" />
+      <yarn id="738" name="Tan - Very Light" rgb="#e2b783" />
+      <yarn id="739" name="Tan - Ultra Very Light" rgb="#f2deb9" />
+      <yarn id="740" name="Tangerine" rgb="#fd6f1a" />
+      <yarn id="741" name="Tangerine - Medium" rgb="#fc8b10" />
+      <yarn id="742" name="Tangerine - Light" rgb="#fdae3c" />
+      <yarn id="743" name="Yellow - Medium" rgb="#fdd769" />
+      <yarn id="744" name="Yellow - Pale" rgb="#fee88d" />
+      <yarn id="745" name="Yellow - Light Pale" rgb="#feeba5" />
+      <yarn id="746" name="Off White" rgb="#faf2d5" />
+      <yarn id="747" name="Sky Blue - Very Light" rgb="#cee9ea" />
+      <yarn id="754" name="Peach - Light" rgb="#f7c9b0" />
+      <yarn id="758" name="Terra Cotta - Very Light" rgb="#e99f83" />
+      <yarn id="760" name="Salmon" rgb="#ec8880" />
+      <yarn id="761" name="Salmon - Light" rgb="#f8b4ad" />
+      <yarn id="762" name="Pearl Gray - Very Light" rgb="#d1d0d2" />
+      <yarn id="772" name="Yellow Green - Very Light" rgb="#d7efa7" />
+      <yarn id="775" name="Baby Blue - Very Light" rgb="#d4e3ef" />
+      <yarn id="776*" name="Pink - Medium" rgb="#fca8ad" />
+      <yarn id="777" name="Red - Deep" rgb="#9b0042" />
+      <yarn id="778" name="Antique Mauve - Very Light" rgb="#dca6a4" />
+      <yarn id="779" name="Brown" rgb="#53332d" />
+      <yarn id="780" name="Topaz - Ultra Very Dark" rgb="#945026" />
+      <yarn id="781*" name="Topaz - Very Dark" rgb="#a25f1f" />
+      <yarn id="782" name="Topaz - Dark" rgb="#b26923" />
+      <yarn id="783" name="Topaz - Medium" rgb="#d0883d" />
+      <yarn id="791" name="Cornflower Blue - Very Dark" rgb="#2d2068" />
+      <yarn id="792" name="Cornflower Blue - Dark" rgb="#454b8b" />
+      <yarn id="793" name="Cornflower Blue - Medium" rgb="#7c82b5" />
+      <yarn id="794" name="Cornflower Blue - Light" rgb="#a0b2d7" />
+      <yarn id="796" name="Royal Blue - Dark" rgb="#272276" />
+      <yarn id="797" name="Royal Blue" rgb="#2b3288" />
+      <yarn id="798" name="Delft Blue - Dark" rgb="#4e5ca7" />
+      <yarn id="799" name="Delft Blue - Medium" rgb="#6b7fc0" />
+      <yarn id="800" name="Delft Blue - Pale" rgb="#b5c7e9" />
+      <yarn id="801" name="Coffee Brown - Dark" rgb="#60391d" />
+      <yarn id="803" name="Blue - Deep" rgb="#202754" />
+      <yarn id="806" name="Peacock Blue - Dark" rgb="#1d6c87" />
+      <yarn id="807" name="Peacock Blue" rgb="#558b9e" />
+      <yarn id="809" name="Delft Blue" rgb="#919fd5" />
+      <yarn id="813" name="Blue - Light" rgb="#7fa0c6" />
+      <yarn id="814" name="Garnet - Dark" rgb="#711033" />
+      <yarn id="815" name="Garnet - Medium" rgb="#800b34" />
+      <yarn id="816" name="Garnet" rgb="#921238" />
+      <yarn id="817" name="Coral Red - Very Dark" rgb="#bb1630" />
+      <yarn id="818" name="Baby Pink" rgb="#fededd" />
+      <yarn id="819" name="Baby Pink - Light" rgb="#fcebde" />
+      <yarn id="820" name="Royal Blue - Very Dark" rgb="#151264" />
+      <yarn id="822" name="Beige Gray - Light" rgb="#e8dfc7" />
+      <yarn id="823" name="Blue - Dark" rgb="#000b44" />
+      <yarn id="824" name="Blue - Very Dark" rgb="#284779" />
+      <yarn id="825" name="Blue - Dark" rgb="#34588f" />
+      <yarn id="826" name="Blue - Medium" rgb="#5075a7" />
+      <yarn id="827" name="Blue - Very Light" rgb="#a4c1de" />
+      <yarn id="828" name="Blue - Ultra Very Light" rgb="#c3d7e6" />
+      <yarn id="829" name="Golden Olive - Very Dark" rgb="#64480c" />
+      <yarn id="830" name="Golden Olive - Dark" rgb="#6e501d" />
+      <yarn id="831" name="Golden Olive - Medium" rgb="#7c5f20" />
+      <yarn id="832" name="Golden Olive" rgb="#9c7230" />
+      <yarn id="833" name="Golden Olive - Light" rgb="#b99956" />
+      <yarn id="834" name="Golden Olive - Very Light" rgb="#d2b468" />
+      <yarn id="838" name="Beige Brown - Very Dark" rgb="#4a3021" />
+      <yarn id="839" name="Beige Brown - Dark" rgb="#5a3c2d" />
+      <yarn id="840" name="Beige Brown - Medium" rgb="#7a5939" />
+      <yarn id="841" name="Beige Brown - Light" rgb="#a37d64" />
+      <yarn id="842" name="Beige Brown - Very Light" rgb="#cbb094" />
+      <yarn id="844" name="Beaver Gray - Ultra Dark" rgb="#494842" />
+      <yarn id="868" name="Hazel Nut Brown" rgb="#995c30" />
+      <yarn id="869" name="Hazelnut Brown - Very Dark" rgb="#784c28" />
+      <yarn id="890" name="Pistachio Green - Ultra Dark" rgb="#324233" />
+      <yarn id="891" name="Carnation - Dark" rgb="#ee3246" />
+      <yarn id="892" name="Carnation - Medium" rgb="#f44753" />
+      <yarn id="893" name="Carnation - Light" rgb="#f66879" />
+      <yarn id="894" name="Carnation - Very Light" rgb="#fd95a3" />
+      <yarn id="895" name="Hunter Green - Very Dark" rgb="#344b2e" />
+      <yarn id="898" name="Coffee Brown - Very Dark" rgb="#532f1b" />
+      <yarn id="899" name="Rose - Medium" rgb="#ea6b78" />
+      <yarn id="900" name="Burnt Orange - Dark" rgb="#c63117" />
+      <yarn id="902" name="Garnet - Very Dark" rgb="#651329" />
+      <yarn id="904" name="Parrot Green - Very Dark" rgb="#386324" />
+      <yarn id="905" name="Parrot Green - Dark" rgb="#467924" />
+      <yarn id="906" name="Parrot Green - Medium" rgb="#6c9e29" />
+      <yarn id="907" name="Parrot Green - Light" rgb="#9dc72d" />
+      <yarn id="909" name="Emerald Green - Very Dark" rgb="#106b43" />
+      <yarn id="910" name="Emerald Green - Dark" rgb="#10814e" />
+      <yarn id="911" name="Emerald Green - Medium" rgb="#109256" />
+      <yarn id="912" name="Emerald Green - Light" rgb="#36b26b" />
+      <yarn id="913" name="Nile Green - Medium" rgb="#55ca7d" />
+      <yarn id="915" name="Plum - Dark" rgb="#95085a" />
+      <yarn id="917" name="Plum - Medium" rgb="#ac1071" />
+      <yarn id="918" name="Red Copper - Dark" rgb="#883630" />
+      <yarn id="919" name="Red Copper" rgb="#9b371b" />
+      <yarn id="920" name="Copper - Medium" rgb="#ab4836" />
+      <yarn id="921" name="Copper" rgb="#c0573d" />
+      <yarn id="922" name="Copper - Light" rgb="#dd6e4c" />
+      <yarn id="924" name="Gray Green - Very Dark" rgb="#384a4a" />
+      <yarn id="926" name="Gray Green - Medium" rgb="#617674" />
+      <yarn id="927" name="Gray Green - Light" rgb="#9fa8a5" />
+      <yarn id="928" name="Gray Green - Very Light" rgb="#c0c6c0" />
+      <yarn id="930" name="Antique Blue - Dark" rgb="#495c6b" />
+      <yarn id="931" name="Antique Blue - Medium" rgb="#667684" />
+      <yarn id="932" name="Antique Blue - Light" rgb="#93a0af" />
+      <yarn id="934" name="Avocado Green - BLACK" rgb="#323324" />
+      <yarn id="935" name="Avocado Green - Dark" rgb="#383a2a" />
+      <yarn id="936" name="Avocado Green - Very Dark" rgb="#3f4227" />
+      <yarn id="937" name="Avocado Green - Medium" rgb="#434f2c" />
+      <yarn id="938" name="Coffee Brown - Ultra Dark" rgb="#45271a" />
+      <yarn id="939" name="Blue - Very Dark" rgb="#09092f" />
+      <yarn id="943" name="Aquamarine - Medium" rgb="#009a77" />
+      <yarn id="945" name="Tawny" rgb="#f6c19a" />
+      <yarn id="946" name="Burnt Orange - Medium" rgb="#ed4115" />
+      <yarn id="947" name="Burnt Orange" rgb="#fc4f16" />
+      <yarn id="948" name="Peach - Very Light" rgb="#fde6d3" />
+      <yarn id="950" name="Desert Sand - Light" rgb="#e5ac8d" />
+      <yarn id="951" name="Tawny - Light" rgb="#faddb6" />
+      <yarn id="954" name="Nile Green" rgb="#6fda8a" />
+      <yarn id="955" name="Nile Green - Light" rgb="#a8ebad" />
+      <yarn id="956" name="Geranium" rgb="#f7566d" />
+      <yarn id="957" name="Geranium - Pale" rgb="#fd99af" />
+      <yarn id="958" name="Seagreen - Dark" rgb="#0db294" />
+      <yarn id="959" name="Seagreen - Medium" rgb="#72d0b7" />
+      <yarn id="961" name="Dusty Rose - Dark" rgb="#de586c" />
+      <yarn id="962" name="Dusty Rose - Medium" rgb="#eb7183" />
+      <yarn id="963" name="Dusty Rose - Ultra Very Light" rgb="#fdccd1" />
+      <yarn id="964" name="Seagreen - Light" rgb="#a5e4d4" />
+      <yarn id="966" name="Baby Green - Medium" rgb="#94d28a" />
+      <yarn id="967" name="Peach - Light" rgb="#ffc2ac" />
+      <yarn id="970" name="Pumpkin - Light" rgb="#fb6721" />
+      <yarn id="971" name="Pumpkin" rgb="#fc670d" />
+      <yarn id="972" name="Canary - Deep" rgb="#fb9f11" />
+      <yarn id="973" name="Canary - Bright" rgb="#fccd2d" />
+      <yarn id="974" name="Winnie The Pooh Gold 2" rgb="#f9c739" />
+      <yarn id="975" name="Golden Brown - Dark" rgb="#813c11" />
+      <yarn id="976" name="Golden Brown - Medium" rgb="#cf7532" />
+      <yarn id="977" name="Golden Brown - Light" rgb="#ec8f43" />
+      <yarn id="986" name="Forest Green - Very Dark" rgb="#2e5230" />
+      <yarn id="987" name="Forest Green - Dark" rgb="#436838" />
+      <yarn id="988" name="Forest Green - Medium" rgb="#66924a" />
+      <yarn id="989" name="Forest Green" rgb="#71a74e" />
+      <yarn id="991" name="Aquamarine - Dark" rgb="#135f55" />
+      <yarn id="992" name="Aquamarine - Light" rgb="#42b59e" />
+      <yarn id="993" name="Aquamarine - Very Light" rgb="#62d8b6" />
+      <yarn id="995" name="Electric Blue - Dark" rgb="#0061b0" />
+      <yarn id="996" name="Electric Blue - Medium" rgb="#49a8eb" />
+      <yarn id="3011" name="Khaki Green - Dark" rgb="#655935" />
+      <yarn id="3012" name="Khaki Green - Medium" rgb="#8b7b4e" />
+      <yarn id="3013" name="Khaki Green - Light" rgb="#afa97b" />
+      <yarn id="3021" name="Brown Gray - Very Dark" rgb="#50403b" />
+      <yarn id="3022" name="Brown Gray - Medium" rgb="#848274" />
+      <yarn id="3023" name="Brown Gray - Light" rgb="#a29b86" />
+      <yarn id="3024" name="Brown Gray - Very Light" rgb="#beb8ac" />
+      <yarn id="3031" name="Mocha Brown - Very Dark" rgb="#423014" />
+      <yarn id="3032" name="Mocha Brown - Medium" rgb="#9d8868" />
+      <yarn id="3033" name="Mocha Brown - Very Light" rgb="#dbc7ad" />
+      <yarn id="3041" name="Antique Violet - Medium" rgb="#866a76" />
+      <yarn id="3042" name="Antique Violet - Light" rgb="#af98a0" />
+      <yarn id="3045" name="Yellow Beige - Dark" rgb="#af8152" />
+      <yarn id="3046" name="Yellow Beige - Medium" rgb="#ceb074" />
+      <yarn id="3047" name="Yellow Beige - Light" rgb="#ead8ab" />
+      <yarn id="3051" name="Green Gray - Dark" rgb="#4c4c1e" />
+      <yarn id="3052" name="Green Gray - Medium" rgb="#787e5c" />
+      <yarn id="3053" name="Green Gray" rgb="#999d75" />
+      <yarn id="3064" name="Desert Sand" rgb="#ba7056" />
+      <yarn id="3072" name="Beaver Gray - Very Light" rgb="#d2d2ca" />
+      <yarn id="3078" name="Golden Yellow - Very Light" rgb="#fcf6b6" />
+      <yarn id="3325" name="Baby Blue - Light" rgb="#adcde7" />
+      <yarn id="3326" name="Rose - Light" rgb="#f9979c" />
+      <yarn id="3328" name="Salmon - Dark" rgb="#be444a" />
+      <yarn id="3340" name="Apricot - Medium" rgb="#fd6b4f" />
+      <yarn id="3341" name="Apricot" rgb="#fd8e78" />
+      <yarn id="3345" name="Hunter Green - Dark" rgb="#40552e" />
+      <yarn id="3346" name="Hunter Green" rgb="#56743b" />
+      <yarn id="3347" name="Yellow Green - Medium" rgb="#6d9646" />
+      <yarn id="3348" name="Yellow Green - Light" rgb="#bedf74" />
+      <yarn id="3350" name="Dusty Rose - Ultra Dark" rgb="#aa3949" />
+      <yarn id="3354" name="Dusty Rose - Light" rgb="#efa5ac" />
+      <yarn id="3362" name="Pine Green - Dark" rgb="#49523c" />
+      <yarn id="3363" name="Pine Green - Medium" rgb="#617451" />
+      <yarn id="3364" name="Pine Green" rgb="#8e9b6d" />
+      <yarn id="3371" name="Black Brown" rgb="#36220e" />
+      <yarn id="3607" name="Plum - Light" rgb="#d94c9d" />
+      <yarn id="3608" name="Plum - Very Light" rgb="#ec81be" />
+      <yarn id="3609" name="Plum - Ultra Light" rgb="#f6b0df" />
+      <yarn id="3684" name="Garnet - Extremely Dark" rgb="#4c1329" />
+      <yarn id="3685" name="Mauve - Very Dark" rgb="#79263b" />
+      <yarn id="3687" name="Mauve" rgb="#b5455d" />
+      <yarn id="3688" name="Mauve - Medium" rgb="#dc7c86" />
+      <yarn id="3689" name="Mauve - Light" rgb="#f8bbc8" />
+      <yarn id="3705" name="Melon - Dark" rgb="#f2494f" />
+      <yarn id="3706" name="Melon - Medium" rgb="#fd6e70" />
+      <yarn id="3708" name="Melon - Light" rgb="#fda0ae" />
+      <yarn id="3712" name="Salmon - Medium" rgb="#d95d5d" />
+      <yarn id="3713" name="Salmon - Very Light" rgb="#fdd5d0" />
+      <yarn id="3716" name="Dusty Rose - Very Light" rgb="#fcafb9" />
+      <yarn id="3721" name="Shell Pink - Dark" rgb="#933b3d" />
+      <yarn id="3722" name="Shell Pink - Medium" rgb="#a04b4c" />
+      <yarn id="3726" name="Antique Mauve - Dark" rgb="#95565c" />
+      <yarn id="3727" name="Antique Mauve - Light" rgb="#da9ea6" />
+      <yarn id="3731" name="Dusty Rose - Very Dark" rgb="#c34c5c" />
+      <yarn id="3733" name="Dusty Rose" rgb="#ea7e86" />
+      <yarn id="3740" name="Antique Violet - Dark" rgb="#71535d" />
+      <yarn id="3743" name="Antique Violet - Very Light" rgb="#cfc2c9" />
+      <yarn id="3746" name="Blue Violet - Dark" rgb="#844ab5" />
+      <yarn id="3747" name="Blue Violet - Very Light" rgb="#d0c5ec" />
+      <yarn id="3750" name="Antique Blue - Very Dark" rgb="#1d4552" />
+      <yarn id="3752" name="Antique Blue - Very Light" rgb="#bac9cc" />
+      <yarn id="3753" name="Antique Blue - Ultra Very Light" rgb="#d9e6ec" />
+      <yarn id="3755" name="Baby Blue" rgb="#81a5d8" />
+      <yarn id="3756" name="Baby Blue - Light" rgb="#e9f4fa" />
+      <yarn id="3760" name="Wedgewood - Medium" rgb="#467293" />
+      <yarn id="3761" name="Sky Blue - Light" rgb="#b1d0df" />
+      <yarn id="3765" name="Peacock Blue - Very Dark" rgb="#175e78" />
+      <yarn id="3766" name="Peacock Blue - Light" rgb="#4b8aa1" />
+      <yarn id="3768" name="Gray Green - Dark" rgb="#4c605f" />
+      <yarn id="3770" name="Tawny - Very Light" rgb="#fef1d8" />
+      <yarn id="3771" name="Peach - Dark" rgb="#e8ac9b" />
+      <yarn id="3772" name="Desert Sand - Very Dark" rgb="#995744" />
+      <yarn id="3773" name="Desert Sand - Medium" rgb="#cf866d" />
+      <yarn id="3774" name="Desert Sand - Very Light" rgb="#f3cfb4" />
+      <yarn id="3776" name="Mahogany - Light" rgb="#c96444" />
+      <yarn id="3777" name="Terra Cotta - Very Dark" rgb="#922f25" />
+      <yarn id="3778" name="Terra Cotta - Light" rgb="#d2705c" />
+      <yarn id="3779" name="Terra Cotta - Ultra Very Light" rgb="#f2ab95" />
+      <yarn id="3781" name="Mocha Brown - Dark" rgb="#593f2b" />
+      <yarn id="3782" name="Mocha Brown - Light" rgb="#b69d80" />
+      <yarn id="3787" name="Brown Gray - Dark" rgb="#62524c" />
+      <yarn id="3790" name="Beige Gray - Ultra Dark" rgb="#6d5a4b" />
+      <yarn id="3799" name="Pewter Gray - Very Dark" rgb="#39393d" />
+      <yarn id="3801" name="Melon - Very Dark" rgb="#e4353d" />
+      <yarn id="3802" name="Antique Mauve - Very Dark" rgb="#672a33" />
+      <yarn id="3803" name="Mauve - Dark" rgb="#872a43" />
+      <yarn id="3804" name="Cyclamen Pink - Dark" rgb="#ce2b63" />
+      <yarn id="3805" name="Cyclamen Pink" rgb="#df3c73" />
+      <yarn id="3806" name="Cyclamen Pink - Light" rgb="#f15a91" />
+      <yarn id="3807" name="Cornflower Blue" rgb="#4b599e" />
+      <yarn id="3808" name="Turquoise - Ultra Very Dark" rgb="#03535c" />
+      <yarn id="3809" name="Turquoise - Very Dark" rgb="#136a75" />
+      <yarn id="3810" name="Turquoise - Dark" rgb="#2d8d98" />
+      <yarn id="3811" name="Turquoise - Very Light" rgb="#a8e2e5" />
+      <yarn id="3812" name="Seagreen - Very Dark" rgb="#07a184" />
+      <yarn id="3813" name="Blue Green - Light" rgb="#86c3ab" />
+      <yarn id="3814" name="Aquamarine" rgb="#0b8673" />
+      <yarn id="3815" name="Celadon Green - Dark" rgb="#437259" />
+      <yarn id="3816" name="Celadon Green" rgb="#60937a" />
+      <yarn id="3817" name="Celadon Green - Light" rgb="#81c6a4" />
+      <yarn id="3818" name="Emerald Green - Ultra Very Dark" rgb="#005d2e" />
+      <yarn id="3819" name="Moss Green - Light" rgb="#ccc959" />
+      <yarn id="3820" name="Straw - Dark" rgb="#dba53e" />
+      <yarn id="3821" name="Straw" rgb="#ebbb52" />
+      <yarn id="3822" name="Straw - Light" rgb="#f7d169" />
+      <yarn id="3823" name="Yellow - Ultra Pale" rgb="#fef5cd" />
+      <yarn id="3824" name="Apricot - Light" rgb="#fcae99" />
+      <yarn id="3825" name="Pumpkin - Pale" rgb="#fea370" />
+      <yarn id="3826" name="Golden Brown" rgb="#b16633" />
+      <yarn id="3827" name="Golden Brown - Pale" rgb="#eaa664" />
+      <yarn id="3828" name="Hazelnut Brown" rgb="#aa7c43" />
+      <yarn id="3829" name="Old Gold - Very Dark" rgb="#a7671d" />
+      <yarn id="3830" name="Terra Cotta" rgb="#a94138" />
+      <yarn id="3831" name="Raspberry - Dark" rgb="#c12b52" />
+      <yarn id="3832" name="Raspberry - Medium" rgb="#e36370" />
+      <yarn id="3833" name="Raspberry - Light" rgb="#ea8b96" />
+      <yarn id="3834" name="Grape - Dark" rgb="#6a2258" />
+      <yarn id="3835" name="Grape - Medium" rgb="#924d78" />
+      <yarn id="3836" name="Grape - Light" rgb="#c597b9" />
+      <yarn id="3837" name="Lavender - Ultra Dark" rgb="#8a2a8f" />
+      <yarn id="3838" name="Lavender Blue - Dark" rgb="#606bad" />
+      <yarn id="3839" name="Lavender Blue - Medium" rgb="#7a7ec5" />
+      <yarn id="3840" name="Lavender Blue - Light" rgb="#b2bdea" />
+      <yarn id="3841" name="Baby Blue - Pale" rgb="#d9eaf2" />
+      <yarn id="3842" name="Wedgewood - Dark" rgb="#06506a" />
+      <yarn id="3843" name="Electric Blue" rgb="#28a3de" />
+      <yarn id="3844" name="Bright Turquoise - Dark" rgb="#1f7fa0" />
+      <yarn id="3845" name="Bright Turquoise - Medium" rgb="#2badd1" />
+      <yarn id="3846" name="Bright Turquoise - Light" rgb="#5eccec" />
+      <yarn id="3847" name="Teal Green - Dark" rgb="#186358" />
+      <yarn id="3848" name="Teal Green - Medium" rgb="#207e72" />
+      <yarn id="3849" name="Teal Green - Light" rgb="#35b193" />
+      <yarn id="3850" name="Bright Green - Dark" rgb="#208b46" />
+      <yarn id="3851" name="Bright Green - Light" rgb="#61bb84" />
+      <yarn id="3852" name="Straw - Very Dark" rgb="#e3a730" />
+      <yarn id="3853" name="Autumn Gold - Dark" rgb="#ef8125" />
+      <yarn id="3854" name="Autumn Gold - Medium" rgb="#fbac56" />
+      <yarn id="3855" name="Autumn Gold - Light" rgb="#fddfa0" />
+      <yarn id="3856" name="Mahogany - Ultra Very Light" rgb="#fdbe8e" />
+      <yarn id="3857" name="Rosewood - Dark" rgb="#6a2f26" />
+      <yarn id="3858" name="Rosewood - Medium" rgb="#803a32" />
+      <yarn id="3859" name="Rosewood - Light" rgb="#ba7a6c" />
+      <yarn id="3860" name="Cocoa" rgb="#896362" />
+      <yarn id="3861" name="Cocoa - Light" rgb="#ac8583" />
+      <yarn id="3862" name="Mocha Beige - Dark" rgb="#6e492a" />
+      <yarn id="3863" name="Mocha Beige - Medium" rgb="#94725d" />
+      <yarn id="3864" name="Mocha Beige - Light" rgb="#c9aa92" />
+      <yarn id="3865" name="Winter White" rgb="#fffdf9" />
+      <yarn id="3866" name="Mocha Brown - Ultra Very Light" rgb="#f0e6d7" />
+    </sortiment>
+  </yarndata>
+</config>
