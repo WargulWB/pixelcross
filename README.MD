@@ -30,9 +30,10 @@ Why not?
 * Install Java
 	* Java Programs require a runtime environment called JRE to be executed. For example you could download the Adoptium OpenJDK Java from this [site](https://adoptium.net/de/temurin/releases/), simply pick the JRE which matches your system. For example 'Windows | x64 | JRE 21 - LTS' and install either via msi or download the zip container, unpack it where you want and add the bin directory to your Path environment variable.
 Since this is about the 'PixelCross' application, I do not really want to got into this in further detail. 
-* Unpack Project Package (zip or tar.gz)
+* Download pixelcross release package
+* Unpack pixelcross release package (zip or tar.gz)
 * Go into the unpacked directory
-* Open in console
+* Open console
 	* On windows simply click into the field in the explorer which shows the directory path, type CMD and hit enter, that opens the command prompt in the directory.
 * Run command explained under 'How to run?'
 
