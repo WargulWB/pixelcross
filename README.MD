@@ -43,7 +43,7 @@ Since this is about the 'PixelCross' application, I do not really want to got in
 java -jar pixelcross-0.1.0-SNAPSHOT-jar-with-dependencies.jar <pixelArtImagePath>
 ```
 
-*<pixelArtImagePath>* needs to be replaced with the path to the pixel art image you want to create a pattern for.
+_'pixelArtImagePath'_ needs to be replaced with the path to the pixel art image you want to create a pattern for.
 
 This means you need an installed Java Runtime Environment (JRE) or Java Development Kit (JDK) for Java 21 or later versions. Which you have to put on your Path environment variable.
 
@@ -58,6 +58,9 @@ C:\Program Files\Java\jdk-21.0.3+9\bin\java.exe -jar pixelcross-0.1.0-SNAPSHOT-j
 ```
 /usr/lib/jvm/jdk-21.0.3+9/bin/java -jar pixelcross-0.1.0-SNAPSHOT-jar-with-dependencies.jar <pixelArtImagePath>
 ```
+The application will generate 2 new image files in the same directory as the pixel art image you referenced:
+* @crosstitch.png - a preview image which shows how the image would look cross stitched
+* @crosstitch_pattern.png - a pattern image you can use as a reference for cross stitching, the image also contains a legend which shows how many of each color there are and what yarns to use, additionally the legend shows the dimensions of the image (without transparent pixels) and how large this is on different CT cloth in inches and in cm
 
 # What can be configured?
 Currently you can only specify on the CLI the path to the pixelart file you want to create a pattern for.
