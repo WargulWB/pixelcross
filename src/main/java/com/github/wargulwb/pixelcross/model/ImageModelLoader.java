@@ -74,7 +74,7 @@ public class ImageModelLoader {
         final PixelCross[][] grid = new PixelCross[width][height];
         final Map<Color, PixelCrossColor> colorMemory = new HashMap<>();
         for (int x = 0; x < width; x++) {
-            for (int y = 0; y < width; y++) {
+            for (int y = 0; y < height; y++) {
                 final Color color = new Color(image.getRGB(x, y), true);
                 final PixelCrossColor pixelCrossColor;
                 if (!colorMemory.containsKey(color)) {

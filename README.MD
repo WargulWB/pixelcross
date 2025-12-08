@@ -40,23 +40,23 @@ Since this is about the 'PixelCross' application, I do not really want to got in
 
 # How to run?
 ```
-java -jar pixelcross-0.1.0-SNAPSHOT-jar-with-dependencies.jar <pixelArtImagePath>
+java -jar pixelcross-0.2.0-jar-with-dependencies.jar <pixelArtImagePath>
 ```
 
 _'pixelArtImagePath'_ needs to be replaced with the path to the pixel art image you want to create a pattern for.
 
 This means you need an installed Java Runtime Environment (JRE) or Java Development Kit (JDK) for Java 21 or later versions. Which you have to put on your Path environment variable.
 
-Alternatively you can call the 'java' program directly:
+Alternatively you can call the 'java' program directly (version number in the JAR name might differ):
 
 * Windows example:
 ```
-C:\Program Files\Java\jdk-21.0.3+9\bin\java.exe -jar pixelcross-0.1.0-SNAPSHOT-jar-with-dependencies.jar <pixelArtImagePath>
+C:\Program Files\Java\jdk-21.0.3+9\bin\java.exe -jar pixelcross-0.2.0-jar-with-dependencies.jar <pixelArtImagePath>
 ```
 
 * Linux (Ubuntu) example:
 ```
-/usr/lib/jvm/jdk-21.0.3+9/bin/java -jar pixelcross-0.1.0-SNAPSHOT-jar-with-dependencies.jar <pixelArtImagePath>
+/usr/lib/jvm/jdk-21.0.3+9/bin/java -jar pixelcross-0.2.0-jar-with-dependencies.jar <pixelArtImagePath>
 ```
 The application will generate 2 new image files in the same directory as the pixel art image you referenced:
 * @crosstitch.png - a preview image which shows how the image would look cross stitched
