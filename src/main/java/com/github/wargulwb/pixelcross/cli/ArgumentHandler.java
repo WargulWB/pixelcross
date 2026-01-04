@@ -53,7 +53,7 @@ public class ArgumentHandler {
             "p",
             "treat-pixel-trasparent",
             "pixelPosition",
-            "The pixel has to be given as coordinate '<horinzontal>,<vertical>' e.g. '0,0' or as 'upper-left'."
+            "The pixel has to be given as coordinate '<horinzontal>,<vertical>' e.g. '0,0' or as 'top_left, top_right, bottom_left, bottom_right'."
           + " Each pixel matching the color of the specified pixel is treated as if it were transparent."
             );
     //@formatter:on
