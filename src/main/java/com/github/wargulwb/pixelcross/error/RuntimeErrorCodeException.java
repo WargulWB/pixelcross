@@ -9,6 +9,10 @@ public class RuntimeErrorCodeException extends RuntimeException {
     private final ErrorCode errorCode;
     private final String description;
 
+    public RuntimeErrorCodeException(final ErrorCode code) {
+        this(code, null, null);
+    }
+
     public RuntimeErrorCodeException(final ErrorCode code, final Throwable cause) {
         this(code, null, cause);
     }

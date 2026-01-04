@@ -17,6 +17,7 @@ import org.jdom2.input.sax.XMLReaders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.github.wargulwb.pixelcross.cli.Arguments;
 import com.github.wargulwb.pixelcross.error.ErrorCode;
 import com.github.wargulwb.pixelcross.error.RuntimeErrorCodeException;
 import com.github.wargulwb.pixelcross.model.yarn.Yarn;
@@ -32,12 +33,14 @@ public class PixelCrossConfig {
     private static final Path CONFIG_PATH = Paths.get("config");
     private static final Path CONFIG_FILE = CONFIG_PATH.resolve("pixelcross.config.xml");
 
+    private final Arguments arguments;
     private final JDOMUtils jdomUtils;
     private final List<YarnSortiment> sortiments = new ArrayList<>();
     private boolean outputGrayscale = false;
 
     @Inject
-    PixelCrossConfig(final JDOMUtils jdomUtils) {
+    PixelCrossConfig(final JDOMUtils jdomUtils, final Arguments arguments) {
+        this.arguments = Objects.requireNonNull(arguments, getClass().getSimpleName() + ".arguments cannot be null!");
         this.jdomUtils = Objects.requireNonNull(jdomUtils, getClass().getSimpleName() + ".jdomUtils cannot be null!");
     }
 
@@ -51,11 +54,8 @@ public class PixelCrossConfig {
 
     public void init() {
         boolean useDefaultConfig = false;
-        if (!Files.isDirectory(CONFIG_PATH)) {
-            LOGGER.warn("Failed to locate config directory '" + CONFIG_PATH + "' ('" + CONFIG_PATH.toAbsolutePath()
-                        + "'). Going to use default config.");
-            useDefaultConfig = true;
-        } else if (!Files.isRegularFile(CONFIG_FILE)) {
+        final Path configFilePath = arguments.getConfigPath().orElse(CONFIG_PATH);
+        if (!Files.isRegularFile(configFilePath)) {
             LOGGER.warn(
                     "Failed to locate file '" + CONFIG_FILE + "' ('" + CONFIG_FILE.toAbsolutePath() + "'). Going to use default config.");
             useDefaultConfig = true;
@@ -66,10 +66,10 @@ public class PixelCrossConfig {
                 final Path defaultConfig = Paths.get(ClassLoader.getSystemResource("pixelcross.config.xml").toURI());
                 init(defaultConfig);
             } catch (final URISyntaxException exc) {
-                throw new RuntimeException("Failed to load default config 'pixelcross.config.xml'!", exc);
+                throw new RuntimeException("Failed to load default packaged config 'pixelcross.config.xml'!", exc);
             }
         } else {
-            init(CONFIG_FILE);
+            init(configFilePath);
         }
     }
 

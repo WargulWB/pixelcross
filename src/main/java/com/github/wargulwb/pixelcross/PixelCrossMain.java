@@ -9,6 +9,10 @@ import javax.imageio.ImageIO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.github.wargulwb.pixelcross.cli.ArgumentHandler;
+import com.github.wargulwb.pixelcross.cli.Arguments;
+import com.github.wargulwb.pixelcross.cli.StdOutWriterImpl;
+import com.github.wargulwb.pixelcross.cli.TestStdOutWriterImpl;
 import com.github.wargulwb.pixelcross.config.PixelCrossConfig;
 import com.github.wargulwb.pixelcross.error.ErrorCode;
 import com.github.wargulwb.pixelcross.error.RuntimeErrorCodeException;
@@ -21,12 +25,34 @@ public class PixelCrossMain {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(PixelCrossMain.class);
 
-    public static void main(final String[] args) {
-        final ArgumentHandler argumentHandler = new ArgumentHandler(args);
-        argumentHandler.init();
-        final Injector injector = initInjectionDependencies();
+    private final boolean testMode;
 
-        final Path originalPixelArtImage = argumentHandler.getInputImageArgument();
+    public PixelCrossMain(final boolean testMode) {
+        this.testMode = testMode;
+    }
+
+    public static void testMain(final String[] args) {
+        new PixelCrossMain(true).run(args);
+    }
+
+    public static void main(final String[] args) {
+        new PixelCrossMain(false).run(args);
+    }
+
+    public void run(final String[] args) {
+
+        final ArgumentHandler argumentHandler = new ArgumentHandler(testMode ? new TestStdOutWriterImpl() : new StdOutWriterImpl());
+        if (argumentHandler.onlyShowHelp(args)) {
+            argumentHandler.showHelp();
+            return;
+        }
+
+        argumentHandler.init(args);
+
+        final Arguments arguments = argumentHandler.getArguments();
+        final Injector injector = initInjectionDependencies(arguments);
+        final Path originalPixelArtImage = arguments.getInputImagePath();
+
         final ImageModel imageModel = injector.getInstance(ImageModelLoader.class).loadImageModel(originalPixelArtImage);
 
         final BufferedImage resultImage = injector.getInstance(CrossStitchPainter.class).paint(imageModel);
@@ -36,8 +62,8 @@ public class PixelCrossMain {
         LOGGER.debug("'pixelcross' terminating normally.");
     }
 
-    private static Injector initInjectionDependencies() {
-        final Injector injector = Guice.createInjector(new DependenciesModule());
+    private Injector initInjectionDependencies(final Arguments arguments) {
+        final Injector injector = Guice.createInjector(new DependenciesModule(arguments));
         injector.getInstance(PixelCrossConfig.class).init();
         return injector;
     }

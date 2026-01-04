@@ -13,6 +13,7 @@ import java.util.Objects;
 
 import javax.imageio.ImageIO;
 
+import com.github.wargulwb.pixelcross.cli.Arguments;
 import com.github.wargulwb.pixelcross.config.PixelCrossConfig;
 import com.github.wargulwb.pixelcross.error.ErrorCode;
 import com.github.wargulwb.pixelcross.error.RuntimeErrorCodeException;
@@ -24,11 +25,13 @@ import jakarta.inject.Inject;
 
 public class ImageModelLoader {
 
+    private final Arguments arguments;
     private final PixelCrossConfig config;
     private final ColorUtils colorUtils;
 
     @Inject
-    ImageModelLoader(final PixelCrossConfig config, final ColorUtils colorUtils) {
+    ImageModelLoader(final Arguments arguments, final PixelCrossConfig config, final ColorUtils colorUtils) {
+        this.arguments = Objects.requireNonNull(arguments, getClass().getSimpleName() + ".arguments cannot be null!");
         this.config = Objects.requireNonNull(config, getClass().getSimpleName() + ".config cannot be null!");
         this.colorUtils = Objects.requireNonNull(colorUtils, getClass().getSimpleName() + ".colorUtils cannot be null!");
     }
@@ -76,18 +79,31 @@ public class ImageModelLoader {
         for (int x = 0; x < width; x++) {
             for (int y = 0; y < height; y++) {
                 final Color color = new Color(image.getRGB(x, y), true);
+                final Color adjustedColor = adjustColor(color, image);
                 final PixelCrossColor pixelCrossColor;
-                if (!colorMemory.containsKey(color)) {
-                    pixelCrossColor = new PixelCrossColor(color);
-                    colorMemory.put(color, pixelCrossColor);
+                if (!colorMemory.containsKey(adjustedColor)) {
+                    pixelCrossColor = new PixelCrossColor(adjustedColor);
+                    colorMemory.put(adjustedColor, pixelCrossColor);
                 } else {
-                    pixelCrossColor = colorMemory.get(color);
+                    pixelCrossColor = colorMemory.get(adjustedColor);
                 }
                 grid[x][y] = new PixelCross(pixelCrossColor);
             }
         }
         final List<PixelCrossColor> colors = colorMemory.values().stream().distinct().toList();
         return new ImageModel(width, height, grid, colors);
+    }
+
+    private Color adjustColor(final Color color, final BufferedImage image) {
+        if (arguments.getTreatAsTransparentColor().isPresent() && arguments.getTreatAsTransparentColor().get().equals(color)) {
+            return new Color(0, 0, 0, 0); // full transparent, RGB values are irrelevant
+        }
+        if (arguments.getTreatAsTransparentPixel().isPresent()
+            && arguments.getTreatAsTransparentPixel().get().getColorOfPixel(image).equals(color)) {
+            return new Color(0, 0, 0, 0); // full transparent, RGB values are irrelevant
+        }
+
+        return color;
     }
 
     private BufferedImage loadBufferedImage(final Path imageFile) {
