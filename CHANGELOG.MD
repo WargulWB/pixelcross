@@ -1,3 +1,7 @@
+# 0.5.0
+- fixed the issue of the config not being loaded from the default path 'config/pixelcross.config.xml'
+- (hopefully) fixed the issue of the packaged config not being loaded as fallback if no config is set via option and no config is available at the default path 'config/pixelcross.config.xml'
+
 # 0.4.0
 - now highlights horizontal and vertical center in pattern via a triangle indicator, painting the center lines blue and drawing a circle around the center position
 

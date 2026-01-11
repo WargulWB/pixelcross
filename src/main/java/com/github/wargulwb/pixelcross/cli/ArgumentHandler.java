@@ -38,7 +38,7 @@ public class ArgumentHandler {
             "config",
             "configFilePath",
             "Per default the config file is loaded from 'config/pixelcross.config.xml'"
-          + " (realtive to the directory from which you started the application)."
+          + " (relative to the directory from which you started the application)."
           + " If that file is not available a default config, packaged with the application is loaded."
           + " This option allows to specify a different path from which the config is loaded instead."
             );

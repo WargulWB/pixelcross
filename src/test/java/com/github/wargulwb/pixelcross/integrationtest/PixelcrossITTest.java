@@ -28,12 +28,14 @@ class PixelcrossITTest {
                     -h, --help
                       Shows the CLI usage information. If specified all other arguments are ignored.
                     -c, --config=<configFilePath>
-                      Per default the config file is loaded from 'config/pixelcross.config.xml' (realtive to the directory from which you started the application). If that file is not available a default config, packaged with the application is loaded. This option allows to specify a different path from which the config is loaded instead.
+                      Per default the config file is loaded from 'config/pixelcross.config.xml' (relative to the directory from which you started the application). If that file is not available a default config, packaged with the application is loaded. This option allows to specify a different path from which the config is loaded instead.
                     -t, --treat-color-trasparent=<color>
                       The color has to be given as rgb value '#RRGGBB'. Each pixel matching the color is treated as if it were transparent.
                     -p, --treat-pixel-trasparent=<pixelPosition>
                       The pixel has to be given as coordinate '<horinzontal>,<vertical>' e.g. '0,0' or as 'top_left, top_right, bottom_left, bottom_right'. Each pixel matching the color of the specified pixel is treated as if it were transparent.
                                                     """;
+
+    private static String ARG_PLACEHOLDER_TEST_CONFIG = "$TEST_CONFIG";
 
     @BeforeEach
     void beforeEach() {
@@ -85,6 +87,11 @@ class PixelcrossITTest {
         test("IT08_CLI_TRANSPARENT_PIXEL_COORDINATE", "test.png", "-p=0,0");
     }
 
+    @Test
+    void IT09AlternativeConfig() throws IOException {
+        test("IT09_ALTERNATIVE_CONFIG", "test.png", "-p=0,0", "-c=$TEST_CONFIG");
+    }
+
     private void testConsole(final String testDirectoryName, final String expectedOutput, final String... args) {
         // run
         LOGGER.info("Running application for IT '{}'!", testDirectoryName);
@@ -102,11 +109,16 @@ class PixelcrossITTest {
 
         // prepare
         final Path tmpImagePath = tempDir.resolve(inputImageName);
-        Files.copy(testInputDir.resolve(inputImageName), tmpImagePath);
+        copy(testInputDir.resolve(inputImageName), tmpImagePath);
+        final Path testConfigPath = testInputDir.resolve("pixelcross.config.xml");
+        final Path tempConfigPath = tempDir.resolve("pixelcross.config.xml");
+        if (Files.isRegularFile(testConfigPath)) {
+            copy(testConfigPath, tempConfigPath);
+        }
 
         // run
         LOGGER.info("Running application for IT '{}'!", testDirectoryName);
-        PixelCrossMain.testMain(asArgs(tmpImagePath.toString(), args));
+        PixelCrossMain.testMain(asArgs(tmpImagePath.toString(), adjustArgs(args, tempConfigPath)));
         LOGGER.info("Done running application for IT '{}'!", testDirectoryName);
 
         // validate
@@ -116,6 +128,18 @@ class PixelcrossITTest {
 
     }
 
+    private String[] adjustArgs(final String[] args, final Path tempConfigPath) {
+        final String[] adjustedArgs = new String[args.length];
+        for (int i = 0; i < args.length; i++) {
+            if (!args[i].contains(ARG_PLACEHOLDER_TEST_CONFIG)) {
+                adjustedArgs[i] = args[i];
+            } else {
+                adjustedArgs[i] = args[i].replace(ARG_PLACEHOLDER_TEST_CONFIG, tempConfigPath.toString());
+            }
+        }
+        return adjustedArgs;
+    }
+
     private String[] asArgs(final String inputImageName, final String... args) {
         final String[] adjustedArgs = new String[args.length + 1];
         adjustedArgs[adjustedArgs.length - 1] = inputImageName;
@@ -123,6 +147,11 @@ class PixelcrossITTest {
             adjustedArgs[i] = args[i];
         }
         return adjustedArgs;
+    }
+
+    private static void copy(final Path src, final Path dest) throws IOException {
+        LOGGER.info("Copying '" + src + "' to '" + dest + "!");
+        Files.copy(src, dest);
     }
 
 }

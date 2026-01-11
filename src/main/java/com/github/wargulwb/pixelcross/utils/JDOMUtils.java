@@ -38,13 +38,20 @@ public class JDOMUtils {
         if (path == null) {
             throw new IllegalArgumentException("Document path must not be null!");
         }
-        final SAXBuilder builder = new SAXBuilder(Optional.ofNullable(reader).orElse(XMLReaders.NONVALIDATING));
         try (InputStream is = Files.newInputStream(path)) {
-            // https://bugs.openjdk.java.net/browse/JDK-8226399
-            final Document result = builder.build(is);
-            result.setBaseURI(path.toUri().toString());
-            return result;
+            return readDocument(is, path.toUri().toString(), reader);
         }
+    }
+
+    public Document readDocument(final InputStream docInputStream, final String baseURI, final XMLReaders reader) throws IOException,
+                                                                                                                  JDOMException {
+        final SAXBuilder builder = new SAXBuilder(Optional.ofNullable(reader).orElse(XMLReaders.NONVALIDATING));
+        // https://bugs.openjdk.java.net/browse/JDK-8226399
+        final Document result = builder.build(docInputStream);
+        if (baseURI != null) {
+            result.setBaseURI(baseURI);
+        }
+        return result;
     }
 
     /**

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<config>
+  <output grayscale="false"/>
+  <yarndata>
+   <sortiment producer="DMC">
+      <!-- only holding one color, thus all colors are mapped to the same yarn which makes it obvious that this config was used -->
+      <yarn id="151" name="Pink" rgb="#ffcbd7" />
+    </sortiment>
+  </yarndata>
+</config>

@@ -1,7 +1,7 @@
 package com.github.wargulwb.pixelcross.config;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -53,20 +53,23 @@ public class PixelCrossConfig {
     }
 
     public void init() {
-        boolean useDefaultConfig = false;
-        final Path configFilePath = arguments.getConfigPath().orElse(CONFIG_PATH);
+        boolean usePackagedConfig = false;
+        final Path configFilePath = arguments.getConfigPath().orElse(CONFIG_FILE);
         if (!Files.isRegularFile(configFilePath)) {
             LOGGER.warn(
-                    "Failed to locate file '" + CONFIG_FILE + "' ('" + CONFIG_FILE.toAbsolutePath() + "'). Going to use default config.");
-            useDefaultConfig = true;
+                    "Failed to locate file '" + configFilePath + "' ('" + configFilePath.toAbsolutePath()
+                        + "'). Going to use packaged default config.");
+            usePackagedConfig = true;
         }
 
-        if (useDefaultConfig) {
-            try {
-                final Path defaultConfig = Paths.get(ClassLoader.getSystemResource("pixelcross.config.xml").toURI());
-                init(defaultConfig);
-            } catch (final URISyntaxException exc) {
-                throw new RuntimeException("Failed to load default packaged config 'pixelcross.config.xml'!", exc);
+        if (usePackagedConfig) {
+            try (final InputStream is = ClassLoader.getSystemResourceAsStream("pixelcross.config.xml")) {
+                init(is);
+            } catch (final IOException exc) {
+                throw new RuntimeErrorCodeException(
+                        ErrorCode.FAILED_TO_LOAD_CONFIG,
+                        "Failed to get packaged fallback config 'src/main/resources/pixelcross.config.xml' as input stream!",
+                        exc);
             }
         } else {
             init(configFilePath);
@@ -83,6 +86,22 @@ public class PixelCrossConfig {
             throw new RuntimeErrorCodeException(
                     ErrorCode.FAILED_TO_LOAD_CONFIG,
                     "Failed to load config from file '" + configFile + "'!",
+                    exc);
+        }
+    }
+
+    private void init(final InputStream configStream) {
+        try {
+            final Document document = jdomUtils.readDocument(configStream,
+                    Paths.get("src/main/resources/pixelcross.config.xml").toUri().toString(),
+                    XMLReaders.NONVALIDATING);
+            final Element configRoot = document.getRootElement();
+            initGeneralConfig(configRoot);
+            initYarnSortiments(configRoot);
+        } catch (IOException | JDOMException exc) {
+            throw new RuntimeErrorCodeException(
+                    ErrorCode.FAILED_TO_LOAD_CONFIG,
+                    "Failed to load packaged fallback 'src/main/resources/pixelcross.config.xml'!",
                     exc);
         }
     }
