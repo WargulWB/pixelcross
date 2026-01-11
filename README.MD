@@ -67,6 +67,27 @@ Currently you can only specify on the CLI the path to the pixelart file you want
 However the program reads in the config file 'config/pixelcross.config.xml'. The yarn sortiments used by the application can be configured via this file. That means if you want to add yarns, sortiments or if you want to change the RGB value of a yarn you can do this by editing this config file.
 The current yarn sortiment is taken from [Lord Libidan - DMC Thread Inventory Spreadsheet](https://lordlibidan.com/dmc-thread-inventory-spreadsheet/). I only wrote a script to convert the spreadsheet into an XML format. This means I can not guarantee that all RGB colors are a good fit for the actual yarn color. That being said, the spreadsheet looks accurate. In any case you shoul double check the color of the yarn when buying it and not blindy follow the suggestions of this application.
 
+## CLI Options
+Versions >= 0.3.0 allow to provide options as arguments to the CLI which change the behaviour.
+Since the options might change in the future, they are not listed here. Instead you can run the program without any arguments or with the option '-h' (or '--help') which tells the program to print the help information to the console. The help information explains the different options.
+
+```
+$ java -jar pixelcross-0.4.0-jar-with-dependencies.jar --help
+java -jar pixelcross-*-jar-with-dependencies.jar [-h] [-c=<configFilePath>] [-t=<color>] [-p=<pixelPosition>] <pixelArtImagePath>
+Creates a cross stitching example image and a pattern image with paths relative to the path of the input pixel art image.
+-h, --help
+  Shows the CLI usage information. If specified all other arguments are ignored.
+-c, --config=<configFilePath>
+  Per default the config file is loaded from 'config/pixelcross.config.xml' (realtive to the directory from which you started the application). If that file is not available a default config, packaged with the application is loaded. This option allows to specify a different path from which the config is loaded instead.
+-t, --treat-color-trasparent=<color>
+  The color has to be given as rgb value '#RRGGBB'. Each pixel matching the color is treated as if it were transparent.
+-p, --treat-pixel-trasparent=<pixelPosition>
+  The pixel has to be given as coordinate '<horinzontal>,<vertical>' e.g. '0,0' or as 'top_left, top_right, bottom_left, bottom_right'. Each pixel matching the color of the specified pixel is treated as if it were transparent.
+
+```
+
+One example is option 't' with which you can tell the programm to treat a specific color as transparent which might be useful if your pixel art image does no use transparency but an alternative color (e.g. magenta) which represents the transparent pixels.
+
 # Plans for the future?
 Currently I am improving my cross stitching and thus do not plan immediate improvements to this project.
 If you have any feature requests let me know, I might implement them.

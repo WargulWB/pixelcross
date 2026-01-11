@@ -1,3 +1,6 @@
+# 0.4.0
+- now highlights horizontal and vertical center in pattern via a triangle indicator, painting the center lines blue and drawing a circle around the center position
+
 # 0.3.0
 - now supports an option '-t, --treat-color-trasparent=<color>' to treat a color as transparent (thus not interpreting it as an additional yarn)
 - now supports an option '-p, --treat-pixel-trasparent=<pixelPosition>' to treat the color of the pixel as transparent (thus not interpreting it as an additional yarn)
