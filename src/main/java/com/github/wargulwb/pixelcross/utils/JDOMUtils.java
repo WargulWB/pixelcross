@@ -11,6 +11,7 @@ import java.util.StringTokenizer;
 import java.util.function.BiFunction;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 import org.jdom2.Attribute;
 import org.jdom2.Document;
 import org.jdom2.Element;
@@ -134,7 +135,7 @@ public class JDOMUtils {
     }
 
     private static String getElementName(final String path) {
-        final int index = StringUtils.lastIndexOf(path, NODE_PATH_SEPARATOR);
+        final int index = Strings.CS.lastIndexOf(path, NODE_PATH_SEPARATOR);
 
         if (index >= 0) {
             return path.substring(index + 1);
@@ -144,7 +145,7 @@ public class JDOMUtils {
     }
 
     private static String getElementPath(final String path) {
-        final int index = StringUtils.lastIndexOf(path, NODE_PATH_SEPARATOR);
+        final int index = Strings.CS.lastIndexOf(path, NODE_PATH_SEPARATOR);
 
         if (index >= 0) {
             return path.substring(0, index);

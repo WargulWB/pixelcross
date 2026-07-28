@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.wargulwb</groupId>
 	<artifactId>pixelcross</artifactId>
-	<version>0.5.0</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>PixelCross</name>
 	<description>Simple application to convert pixel art images to cross stitch
 		patterns.</description>
@@ -21,16 +21,16 @@
 		<version.maven.surefire>3.5.4</version.maven.surefire>
 		<version.maven.source>3.2.1</version.maven.source>
 		<!-- ___ dependency versions ___ -->
-		<version.commons.lang>3.12.0</version.commons.lang>
+		<version.commons.lang>3.20.0</version.commons.lang>
 		<version.guice>7.0.0</version.guice>
 		<version.jdom2>2.0.6.1</version.jdom2>
 		<!-- Logging -->
-		<version.log4j>2.20.0</version.log4j>
-		<version.slf4j>1.7.26</version.slf4j>
+		<version.log4j>2.26.1</version.log4j>
+		<version.slf4j>2.0.18</version.slf4j>
 		<!-- tests-->
-		<version.hamcrest>2.2</version.hamcrest>
-		<version.junit>5.9.1</version.junit>
-		<version.mockito>4.8.0</version.mockito>
+		<version.hamcrest>3.0</version.hamcrest>
+		<version.junit>6.1.2</version.junit>
+		<version.mockito>5.23.0</version.mockito>
 		<!-- ___ build variables ___ -->
 		<maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
 		<tool.mainclass>com.github.wargulwb.pixelcross.PixelCrossMain</tool.mainclass>
@@ -67,7 +67,7 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
-			<artifactId>log4j-slf4j-impl</artifactId>
+			<artifactId>log4j-slf4j2-impl</artifactId>
 			<version>${version.log4j}</version>
 			<exclusions>
 				<exclusion>

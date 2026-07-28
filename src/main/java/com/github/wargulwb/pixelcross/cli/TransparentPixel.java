@@ -8,7 +8,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 
 import com.github.wargulwb.pixelcross.error.ErrorCode;
 import com.github.wargulwb.pixelcross.error.RuntimeErrorCodeException;
@@ -32,7 +32,7 @@ public class TransparentPixel {
     public static void validate(final String value) {
         if (value == null
             || (!Arrays.stream(SUPPORTED_NAMES)
-                    .anyMatch(name -> StringUtils.equalsIgnoreCase(name, value))
+                    .anyMatch(name -> Strings.CI.equals(name, value))
                 && !COORDINATE_PATTERN.matcher(value).matches())) {
             throw new RuntimeErrorCodeException(
                     ErrorCode.INVALID_TRANSPARENT_PIXEL,
@@ -54,16 +54,16 @@ public class TransparentPixel {
     }
 
     private Coordinate getCoordinate(final BufferedImage image) {
-        if (StringUtils.equalsIgnoreCase(TOP_LEFT, value)) {
+        if (Strings.CI.equals(TOP_LEFT, value)) {
             return new Coordinate(0, 0);
         }
-        if (StringUtils.equalsIgnoreCase(TOP_RIGHT, value)) {
+        if (Strings.CI.equals(TOP_RIGHT, value)) {
             return new Coordinate(image.getWidth() - 1, 0);
         }
-        if (StringUtils.equalsIgnoreCase(BOTTOM_LEFT, value)) {
+        if (Strings.CI.equals(BOTTOM_LEFT, value)) {
             return new Coordinate(0, image.getHeight() - 1);
         }
-        if (StringUtils.equalsIgnoreCase(BOTTOM_RIGHT, value)) {
+        if (Strings.CI.equals(BOTTOM_RIGHT, value)) {
             return new Coordinate(image.getWidth() - 1, image.getHeight() - 1);
         }
         final Matcher matcher = COORDINATE_PATTERN.matcher(value);

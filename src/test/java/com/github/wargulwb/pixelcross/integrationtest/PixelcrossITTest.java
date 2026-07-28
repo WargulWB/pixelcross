@@ -150,7 +150,7 @@ class PixelcrossITTest {
     }
 
     private static void copy(final Path src, final Path dest) throws IOException {
-        LOGGER.info("Copying '" + src + "' to '" + dest + "!");
+        LOGGER.info("Copying '" + src + "' to '" + dest + "'!");
         Files.copy(src, dest);
     }
 

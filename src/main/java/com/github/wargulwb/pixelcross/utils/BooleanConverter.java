@@ -1,6 +1,6 @@
 package com.github.wargulwb.pixelcross.utils;
 
-import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Strings;
 
 public class BooleanConverter implements Converter<Boolean> {
 
@@ -9,7 +9,7 @@ public class BooleanConverter implements Converter<Boolean> {
         if (value == null) {
             return null;
         }
-        return StringUtils.equalsIgnoreCase("true", value);
+        return Strings.CI.equals("true", value);
     }
 
     @Override

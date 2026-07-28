@@ -22,7 +22,7 @@
     </file>
     <file>
       <fileMode>0644</fileMode>
-      <source>${basedir}/src/main/resources/${project.artifactId}.config.xml</source>
+      <source>${basedir}/src/main/resources/pixelcross.config.xml</source>
       <outputDirectory>${packagename.long}/config</outputDirectory>
     </file>
     <file>
